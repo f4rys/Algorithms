@@ -13,8 +13,7 @@
 * Merge sort
 * Quick sort
 * Heap sort
-* Counting sort
-* Radix sort
+* Bucket sort
 
 2. **Searching Algorithms:**
 * Linear search
