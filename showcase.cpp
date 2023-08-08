@@ -18,11 +18,12 @@ void MeasureTimeOfSearchingAlgorithms(int array[], int size, int value, void (*f
     cout << "Runtime: " << duration.count() << " microseconds" << endl << endl;
 }
 
-int main() {
-    int array[500];
-    int size = sizeof(array) / sizeof(array[0]);
+void ShowcaseSearchingAlgorithms(){
 
-    for (int i = 0; i < size; ++i) {
+    const int SIZE = 500;
+    int array[SIZE];
+
+    for (int i = 0; i < SIZE; ++i) {
         array[i] = i + 1;
     }
 
@@ -30,19 +31,25 @@ int main() {
 
     cout << "Linear search:" << endl;
     Sleep(1000);
-    MeasureTimeOfSearchingAlgorithms(array, size, value, &LinearSearch);
+    MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &LinearSearch);
     
     cout << "Binary search:" << endl;
     Sleep(1000);
-    MeasureTimeOfSearchingAlgorithms(array, size, value, &BinarySearch);
+    MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &BinarySearch);
 
     cout << "Interpolation search:" << endl;
     Sleep(1000);
-    MeasureTimeOfSearchingAlgorithms(array, size, value, &InterpolationSearch);
+    MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &InterpolationSearch);
 
     cout << "Jump search:" << endl;
     Sleep(1000);
-    MeasureTimeOfSearchingAlgorithms(array, size, value, &JumpSearch);
+    MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &JumpSearch);
+
+}
+
+int main() {
+
+    ShowcaseSearchingAlgorithms();
 
     return 0;
 }

@@ -1,20 +1,29 @@
-#include <iostream>
-using namespace std;
-
 void InterpolationSearch(int array[], int size, int value){
-
+    
     int left = 0;
     int mid = -1;
-    int right = size;
+    int right = size - 1;
 
-    while(left < right)
+    while(left <= right)
     {
-        if(left == right || array[left] == array[right])
+        if(array[left] == array[right])
         {
-            break;
+            if (array[left] == value) {
+                cout << "Searched value " << value << " found at position " << left + 1 << endl;
+                return;
+            } else {
+                cout << "Searched value " << value << " not found" << endl;
+                return;
+            }
         }
 
-        mid = left + ((right - left)/(array[right] - array[left]) * (value - array[left]));
+        mid = left + ((double)(value - array[left]) / (array[right] - array[left])) * (right - left);
+
+        if(mid < 0 || mid >= size)
+        {
+            cout << "Searched value " << value << " not found" << endl;
+            return;
+        }
 
         if(array[mid] == value)
         {
@@ -33,7 +42,6 @@ void InterpolationSearch(int array[], int size, int value){
             }
         }
     }
-    
+
     cout << "Searched value " << value << " not found" << endl;
-    return;
 }
