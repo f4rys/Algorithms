@@ -84,11 +84,3 @@ void ShowcaseSortingAlgorithms(){
     Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &SelectionSort);
 }
-
-int main() {
-
-    ShowcaseSearchingAlgorithms();
-    ShowcaseSortingAlgorithms();
-
-    return 0;
-}

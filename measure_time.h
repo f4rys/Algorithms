@@ -6,7 +6,7 @@ using namespace std;
 using namespace std::chrono;
 
 void MeasureTimeOfSearchingAlgorithms(int array[], int size, int value, void (*functionPtr)(int*, int, int)) {
-    auto start = steady_clock::now(); // Use steady_clock instead of high_resolution_clock
+    auto start = steady_clock::now();
     functionPtr(array, size, value);
     auto stop = steady_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
@@ -20,7 +20,7 @@ void MeasureTimeOfSortingAlgorithms(int array[], int size, void (*functionPtr)(i
         temp_array[i] = array[i];
     }
 
-    auto start = steady_clock::now(); // Use steady_clock instead of high_resolution_clock
+    auto start = steady_clock::now();
     functionPtr(temp_array, size);
     auto stop = steady_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
