@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cmath>
+
 using namespace std;
 
 void BinarySearch(int array[], int size, int value)
