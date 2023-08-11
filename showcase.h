@@ -16,7 +16,30 @@
 #include "searching_algorithms/interpolation_search.h"
 #include "searching_algorithms/jump_search.h"
 
+#include "string_algorithms/pattern_searching.h"
+#include "string_algorithms/longest_common_prefix.h"
+#include "string_algorithms/longest_palindromic_substring.h"
+
 using namespace std;
+
+void ShowcaseStringAlgorithms(){
+    const int SIZE = 3;
+    string array[SIZE] = {"mango", "manhattan", "manmade"};
+    string str = "razzmatazz";
+    string pattern = "zz";
+
+    cout << "Knuth-Morris-Pratt pattern searching algorithm:" << endl;
+    Sleep(1000);
+    MeasureTimeOfKMPAlgorithm(str, pattern, &PatternSearching);
+
+    cout << "Longest common prefix using Divide and Conquer approach:" << endl;
+    Sleep(1000);
+    MeasureTimeOfStringAlgorithms(array, SIZE, &LongestCommonPrefix);
+
+    cout << "Longest palindromic substring using naive approach:" << endl;
+    Sleep(1000);
+    MeasureTimeOfStringAlgorithms(array, SIZE, &LongestPalindromicSubstring);
+}
 
 void ShowcaseSearchingAlgorithms(){
 
