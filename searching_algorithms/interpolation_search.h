@@ -1,3 +1,5 @@
+#include <iostream>
+
 using namespace std;
 
 void InterpolationSearch(int array[], int size, int value){
