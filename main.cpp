@@ -6,10 +6,15 @@ using namespace std;
 
 int main() {
 
-    cout << "** Various algorithms with their runtimes when used on example data **" << endl << endl;
+    cout << "** Various algorithms showcase with example data **" << endl << endl;
 
+    cout << "* Searching algorithms with their runtimes for comparison: *" << endl << endl;
     ShowcaseSearchingAlgorithms();
+
+    cout << "* Sorting algorithms with their runtimes for comparison: *" << endl << endl;
     ShowcaseSortingAlgorithms();
+
+    cout << "* String related algorithms with their input and results: *" << endl << endl;
     ShowcaseStringAlgorithms();
 
     return 0;

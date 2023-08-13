@@ -30,15 +30,18 @@ void ShowcaseStringAlgorithms(){
 
     cout << "Knuth-Morris-Pratt pattern searching algorithm:" << endl;
     Sleep(1000);
-    MeasureTimeOfKMPAlgorithm(str, pattern, &PatternSearching);
+    PatternSearching(str, pattern);
+    cout << endl;
 
     cout << "Longest common prefix using Divide and Conquer approach:" << endl;
     Sleep(1000);
-    MeasureTimeOfStringAlgorithms(array, SIZE, &LongestCommonPrefix);
+    LongestCommonPrefix(array, SIZE);
+    cout << endl;
 
     cout << "Longest palindromic substring using naive approach:" << endl;
     Sleep(1000);
-    MeasureTimeOfStringAlgorithms(array, SIZE, &LongestPalindromicSubstring);
+    LongestPalindromicSubstring(array, SIZE);
+    cout << endl;
 }
 
 void ShowcaseSearchingAlgorithms(){
