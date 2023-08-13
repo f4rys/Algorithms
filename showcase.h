@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 
 #include "measure_time.h"
 
@@ -20,7 +19,49 @@
 #include "string_algorithms/longest_common_prefix.h"
 #include "string_algorithms/longest_palindromic_substring.h"
 
+#include "dynamic_programming/coin_change_problem.h"
+#include "dynamic_programming/fibonacci_series.h"
+#include "dynamic_programming/knapsack_problem.h"
+#include "dynamic_programming/longest_increasing_subsequence.h"
+
 using namespace std;
+
+void ShowcaseDynamicProgrammingAlgorithms(){
+
+    // Coin change problem variables
+    int coins_sum = 4;
+    const int COINS_COUNT = 3;
+    int coins[COINS_COUNT] = {1, 2, 3};
+
+    // Fibonacci series variables
+    const int FIBONACCI = 10;
+
+    // Knapsack problem variables
+    const int ITEM_COUNT = 4;
+    const int KNAPSACK_CAPACITY = 10;
+    int values[ITEM_COUNT] = {10, 40, 30, 50};
+    int weights[ITEM_COUNT] = {5, 4, 6, 3};
+
+    // Longest increasing subsequence variables
+    const int LENGTH = 8;
+    int array[LENGTH] = {10, 22, 9, 33, 21, 50, 41, 60};
+
+    cout << "Coin change problem solved with dynamic programming:" << endl;
+    CoinChangeProblem(coins, COINS_COUNT, coins_sum);
+    cout << endl;
+
+    cout << "Fibonacci series using dynamic programming:" << endl;
+    FibonacciSeries(FIBONACCI);
+    cout << endl;
+
+    cout << "Knapsack problem using dynamic programming:" << endl;
+    KnapsackProblem(ITEM_COUNT, KNAPSACK_CAPACITY, values, weights);
+    cout << endl;
+
+    cout << "Longest increasing subsequence using dynamic programming:" << endl;
+    LongestIncreasingSubsequence(array, LENGTH);
+    cout << endl;
+}
 
 void ShowcaseStringAlgorithms(){
     const int SIZE = 3;
@@ -29,17 +70,14 @@ void ShowcaseStringAlgorithms(){
     string pattern = "zz";
 
     cout << "Knuth-Morris-Pratt pattern searching algorithm:" << endl;
-    Sleep(1000);
     PatternSearching(str, pattern);
     cout << endl;
 
     cout << "Longest common prefix using Divide and Conquer approach:" << endl;
-    Sleep(1000);
     LongestCommonPrefix(array, SIZE);
     cout << endl;
 
     cout << "Longest palindromic substring using naive approach:" << endl;
-    Sleep(1000);
     LongestPalindromicSubstring(array, SIZE);
     cout << endl;
 }
@@ -56,19 +94,15 @@ void ShowcaseSearchingAlgorithms(){
     int value = 465;
 
     cout << "Linear search:" << endl;
-    Sleep(1000);
     MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &LinearSearch);
     
     cout << "Binary search:" << endl;
-    Sleep(1000);
     MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &BinarySearch);
 
     cout << "Interpolation search:" << endl;
-    Sleep(1000);
     MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &InterpolationSearch);
 
     cout << "Jump search:" << endl;
-    Sleep(1000);
     MeasureTimeOfSearchingAlgorithms(array, SIZE, value, &JumpSearch);
 
 }
@@ -83,30 +117,23 @@ void ShowcaseSortingAlgorithms(){
                         26,	34,	28,	20,	12, 88, 34,	20,	22,	98, 96,	5, 93, 15, 85, 77, 50, 68, 27, 26};
     
     cout << "Bubble sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &BubbleSort);
 
     cout << "Bucket sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &BucketSort);
 
     cout << "Heap sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &HeapSort);
 
     cout << "Insertion sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &InsertionSort);
 
     cout << "Merge sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &MergeSort);
 
     cout << "Quick sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &QuickSort);
 
     cout << "Selection sort:" << endl;
-    Sleep(1000);
     MeasureTimeOfSortingAlgorithms(array, SIZE, &SelectionSort);
 }

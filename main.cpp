@@ -17,5 +17,8 @@ int main() {
     cout << "* String related algorithms with their input and results: *" << endl << endl;
     ShowcaseStringAlgorithms();
 
+    cout << "* Problems solved using dynamic programming: *" << endl << endl;
+    ShowcaseDynamicProgrammingAlgorithms();
+
     return 0;
 }
