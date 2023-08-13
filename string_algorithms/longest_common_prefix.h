@@ -51,11 +51,15 @@ void LongestCommonPrefix(string array[], int size)
     int right = size - 1;
     string result = LongestCommonPrefix(array, left, right);
 
-    cout << "Longest common prefix in array of strings: ' ";
+    cout << "Longest common prefix in array of strings: '";
 
     for(int i=0; i<size; i++)
     {
-        cout << array[i] << " ";
+        cout << array[i];
+        if(i != size-1){
+            cout << ", ";
+        }
+        
     }
     
     cout << "' is '" << result << "'" << endl;
