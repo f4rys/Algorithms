@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void InterpolationSearch(int array[], int size, int value){
-    
+void InterpolationSearch(int array[], int size, int value)
+{
     int left = 0;
     int mid = -1;
     int right = size - 1;
@@ -12,10 +12,14 @@ void InterpolationSearch(int array[], int size, int value){
     {
         if(array[left] == array[right])
         {
-            if (array[left] == value) {
+            if (array[left] == value) 
+            {
                 cout << "Searched value " << value << " found at position " << left + 1 << endl;
                 return;
-            } else {
+            } 
+
+            else 
+            {
                 cout << "Searched value " << value << " not found" << endl;
                 return;
             }
@@ -34,12 +38,14 @@ void InterpolationSearch(int array[], int size, int value){
             cout << "Searched value " << value << " found at position " << mid + 1 << endl;
             return;
         }
+
         else
         {
             if(array[mid] < value)
             {
                 left = mid + 1;
             }
+            
             else if(array[mid] > value)
             {
                 right = mid - 1;

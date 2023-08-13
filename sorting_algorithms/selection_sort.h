@@ -22,6 +22,7 @@ void SelectionSort(int array[], int size)
     for(int i=0; i<size; i++)
     {
         int position = GetMinimalValue(array, i, size);
+        
         swap(array[i], array[position]);
     }
 }

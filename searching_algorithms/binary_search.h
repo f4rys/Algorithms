@@ -10,7 +10,7 @@ void BinarySearch(int array[], int size, int value)
 
     while(left <= right)
     {
-        int mean = floor((left+right)/2);
+        int mean = floor((left+right) / 2);
 
         if(array[mean] < value)
         {

@@ -2,30 +2,36 @@
 
 using namespace std;
 
-void CoinChangeProblem(int coins[], int n, int sum) {
-    int i, j;
-
+void CoinChangeProblem(int coins[], int n, int sum)
+{
     int** array = new int*[sum + 1];
 
-    for (i = 0; i <= sum; i++) {
+    for (int i = 0; i <= sum; i++) 
+    {
         array[i] = new int[n + 1];
     }
 
-    for (i = 0; i <= sum; i++) {
-        for (j = 0; j <= n; j++) {
+    for (int i = 0; i <= sum; i++) 
+    {
+        for (int j = 0; j <= n; j++) 
+        {
             array[i][j] = 0;
         }
     }
 
-    for (i = 0; i <= n; i++) {
+    for (int i = 0; i <= n; i++) 
+    {
         array[0][i] = 1;
     }
 
-    for (i = 1; i <= sum; i++) {
-        for (j = 1; j <= n; j++) {
+    for (int i = 1; i <= sum; i++) 
+    {
+        for (int j = 1; j <= n; j++) 
+        {
             array[i][j] = array[i][j - 1];
 
-            if (i - coins[j-1] >= 0) {
+            if (i - coins[j-1] >= 0) 
+            {
                 array[i][j] += array[i - coins[j-1]][j];
             }
         }
@@ -36,7 +42,9 @@ void CoinChangeProblem(int coins[], int n, int sum) {
     for(int i=0; i<n; i++)
     {
         cout << coins[i];
-        if(i != n-1){
+
+        if(i != n-1)
+        {
             cout << ", ";
         }
     }
@@ -45,7 +53,8 @@ void CoinChangeProblem(int coins[], int n, int sum) {
 
     cout << "There are " << array[sum][n] << " solutions to coin change problem." << endl;
 
-    for (i = 0; i <= sum; i++) {
+    for (int i = 0; i <= sum; i++) 
+    {
         delete[] array[i];
     }
 

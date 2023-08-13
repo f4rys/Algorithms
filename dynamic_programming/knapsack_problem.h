@@ -3,29 +3,36 @@
 
 using namespace std;
 
-void KnapsackProblem(int n, int w, int values[], int weights[]){
+void KnapsackProblem(int n, int w, int values[], int weights[])
+{
     
     int** matrix = new int*[n+1];
 
-    for (int i = 0; i < n+1; i++) {
+    for (int i = 0; i < n+1; i++) 
+    {
         matrix[i] = new int[w+1];
     }
 
-    for(int i=0; i<w; i++){
+    for(int i=0; i<w; i++)
+    {
         matrix[0][i] = 0;
     }
 
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++)
+    {
         matrix[i][0];
     }
 
-    for(int item=1; item<=n; item++){
-        for(int capacity = 1; capacity<=w; capacity++){
+    for(int item=1; item<=n; item++)
+    {
+        for(int capacity = 1; capacity<=w; capacity++)
+        {
             int maxValWithoutCurrent = matrix[item-1][capacity];
             int maxValWithCurrent = 0;
             int weightOfCurrent = weights[item-1];
 
-            if(capacity >= weightOfCurrent){
+            if(capacity >= weightOfCurrent)
+            {
                 maxValWithCurrent = values[item -1];
 
                 int remainingCapacity = capacity - weightOfCurrent;
@@ -42,7 +49,8 @@ void KnapsackProblem(int n, int w, int values[], int weights[]){
     for(int i=0; i<n; i++)
     {
         cout << values[i];
-        if(i != n-1){
+        if(i != n-1)
+        {
             cout << ", ";
         }
     }
@@ -52,7 +60,8 @@ void KnapsackProblem(int n, int w, int values[], int weights[]){
     for(int i=0; i<n; i++)
     {
         cout << weights[i];
-        if(i != n-1){
+        if(i != n-1)
+        {
             cout << ", ";
         }
     }
@@ -61,7 +70,8 @@ void KnapsackProblem(int n, int w, int values[], int weights[]){
 
     cout << "Greatest value of items that can be fit in the knapsack is " << matrix[n][w] << "." << endl;
 
-    for (int i = 0; i < n+1; i++) {
+    for (int i = 0; i < n+1; i++) 
+    {
         delete[] matrix[i];
     }
 

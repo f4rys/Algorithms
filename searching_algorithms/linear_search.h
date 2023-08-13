@@ -2,7 +2,8 @@
 
 using namespace std;
 
-void LinearSearch(int array[], int size, int value){
+void LinearSearch(int array[], int size, int value)
+{
     for (int i = 0; i < size; i++)
     {
         if (array[i] == value)
@@ -11,5 +12,6 @@ void LinearSearch(int array[], int size, int value){
             return;
         }
     }
+    
     cout << "Searched value " << value << " not found" << endl;
 }

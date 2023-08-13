@@ -27,11 +27,13 @@ void MergeArrays(int array[], int left, int mean, int right)
             array[k] = leftArray[i];
             i++;
         }
+
         else
         {
             array[k] = rightArray[j];
             j++;
         }
+
         k++;
     }
 
@@ -58,6 +60,7 @@ void MergeSort(int array[], int left, int right)
     if (left < right)
     {
         int mean = (left + right) / 2;
+
         MergeSort(array, left, mean);
         MergeSort(array, mean + 1, right);
         MergeArrays(array, left, mean, right);
@@ -68,5 +71,6 @@ void MergeSort(int array[], int size)
 {
     int left = 0;
     int right = size - 1;
+    
     MergeSort(array, left, right);
 }
