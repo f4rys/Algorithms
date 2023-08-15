@@ -23,5 +23,8 @@ int main() {
     cout << "* Miscellanous algorithms: *" << endl << endl;
     ShowcaseMiscellanousAlgorithms();
 
+    cout << "* Backtracking algorithms: *" << endl << endl;
+    ShowcaseBacktrackingAlgorithms();
+
     return 0;
 }

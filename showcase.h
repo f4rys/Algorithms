@@ -30,7 +30,60 @@
 #include "miscellanous/majority_voting_algorithm.h"
 #include "miscellanous/sieve_of_eratosthenes.h"
 
+#include "backtracking/n_queens_problem.h"
+#include "backtracking/rat_in_a_maze.h"
+#include "backtracking/subset_sum_problem.h"
+#include "backtracking/sudoku.h"
+
 using namespace std;
+
+void ShowcaseBacktrackingAlgorithms(){
+
+    // N Queens Problem variables
+    const int N = 8;
+
+    // Rat in a Maze Problem variables
+    vector<vector<bool>> maze = {
+        {1, 0, 0, 0},
+        {1, 1, 0, 1},
+        {0, 1, 1, 0},
+        {1, 1, 1, 1}
+    };
+
+    // Subset Sum Problem variables
+    const int ITEM_COUNT = 6;
+    int set[ITEM_COUNT] = {2,6,9,4,23,11};
+    int sum = 26;
+
+    // Sudoku variables
+    vector<vector<int>> grid = {
+        {3, 0, 6, 5, 0, 8, 4, 0, 0},
+        {5, 2, 0, 0, 0, 0, 0, 0, 0},
+        {0, 8, 7, 0, 0, 0, 0, 3, 1},
+        {0, 0, 3, 0, 1, 0, 0, 8, 0},
+        {9, 0, 0, 8, 6, 3, 0, 0, 5},
+        {0, 5, 0, 0, 9, 0, 6, 0, 0},
+        {1, 3, 0, 0, 0, 0, 2, 5, 0},
+        {0, 0, 0, 0, 0, 0, 0, 7, 4},
+        {0, 0, 5, 2, 0, 6, 3, 0, 0}
+    };
+
+    cout << "N Queens Problem:" << endl;
+    NQueensProblem(N);
+    cout << endl;
+
+    cout << "Rat in a Maze Problem:" << endl;
+    RatInAMaze(maze);
+    cout << endl;
+
+    cout << "Subset Sum Problem:" << endl;
+    SubsetSumProblem(set, sum, ITEM_COUNT);
+    cout << endl;
+
+    cout << "Sudoku solving:" << endl;
+    Sudoku(grid);
+    cout << endl;
+}
 
 void ShowcaseMiscellanousAlgorithms(){
 
