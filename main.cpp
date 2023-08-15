@@ -20,5 +20,8 @@ int main() {
     cout << "* Problems solved using dynamic programming: *" << endl << endl;
     ShowcaseDynamicProgrammingAlgorithms();
 
+    cout << "* Miscellanous algorithms: *" << endl << endl;
+    ShowcaseMiscellanousAlgorithms();
+
     return 0;
 }

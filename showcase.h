@@ -24,7 +24,56 @@
 #include "dynamic_programming/knapsack_problem.h"
 #include "dynamic_programming/longest_increasing_subsequence.h"
 
+#include "miscellanous/binary_exponentation.h"
+#include "miscellanous/extended_euclidean_algorithm.h"
+#include "miscellanous/josephus_problem.h"
+#include "miscellanous/majority_voting_algorithm.h"
+#include "miscellanous/sieve_of_eratosthenes.h"
+
 using namespace std;
+
+void ShowcaseMiscellanousAlgorithms(){
+
+    // Binary exponentation variables
+    int base = 3;
+    int power = 6;
+
+    // Extended Euclidean Algorithm variables
+    int a = 35; 
+    int b = 15;
+
+    // Josephus Problem variables
+    int n = 8;
+    int k = 3;
+
+    // Majority Voting Algorithm variables
+    const int count = 8;
+    int array[count] = {1, 5, 3, 1, 1, 1, 1, 2};
+
+    // Sieve of Eratosthenes variables
+    int range_end = 59;
+
+    cout << "Binary exponentation:" << endl;
+    BinaryExponentation(base, power);
+    cout << endl;
+
+    cout << "Extended Euclidean algorithm:" << endl;
+    ExtendedEuclideanAlgorithm(a,b);
+    cout << endl;
+
+    cout << "Josephus problem:" << endl;
+    JosephusProblem(n,k);
+    cout << endl;
+
+    cout << "Majority voting algorithm:" << endl;
+    MajorityVotingAlgorithm(array, count);
+    cout << endl;
+
+    cout << "Sieve of Eratosthenes:" << endl;
+    SieveOfEratosthenes(range_end);
+    cout << endl;
+
+}
 
 void ShowcaseDynamicProgrammingAlgorithms(){
 
