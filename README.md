@@ -50,5 +50,5 @@ To view showcase of all algorithms with example inputs just run *main.cpp* in te
 * Binary Exponentiation
 * Extended Euclidean Algorithm (GCD)
 * Josephus Problem
-* Majority Voting Algorithm
+* Majority Voting Algorithm (Boyer-Moore)
 * Sieve of Eratosthenes (Prime numbers)
