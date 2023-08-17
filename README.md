@@ -1,63 +1,54 @@
 # Algorithms
 
-
 <div>Various algorithms written in C++</div>
 
+## Showcase
+To view showcase of all algorithms with example inputs just run *main.cpp* in terminal.
 
-## Contents
+## Content
 
 1. **Sorting Algorithms:**
 * Bubble sort
-* Selection sort
+* Bucket sort
+* Heap sort
 * Insertion sort 
 * Merge sort
 * Quick sort
-* Heap sort
-* Bucket sort
+* Selection sort
 
 2. **Searching Algorithms:**
-* Linear search
 * Binary search
 * Interpolation search
 * Jump search
+* Linear search
 
-3. **Graph Algorithms:**
-* Depth-First Search (DFS)
-* Breadth-First Search (BFS)
-* Dijkstra's Algorithm (Shortest Path)
-* Bellman-Ford Algorithm (Shortest Path)
-* Floyd-Warshall Algorithm (All-Pairs Shortest Path)
-* Kruskal's Algorithm (Maximum Spanning Tree)
-* Prim's Algorithm (Minimum Spanning Tree)
+3. **String Algorithms:**
+* Longest Common Prefix (Divide and Conquer)
+* Longest Palindromic Substring (Naive approach)
+* Pattern searching (Knuth–Morris–Pratt algorithm)
 
-4. **Tree Algorithms:**
-* Binary Search Tree (Insertion, Deletion, Search)
-* AVL Tree (Insertion, Deletion, Search)
-* Red-Black Tree (Insertion, Deletion, Search)
-* Binary Heap (Insertion, Deletion, Heapify)
-
-5. **Dynamic Programming:**
-* Fibonacci Series
-* Longest Common Subsequence
-* Knapsack Problem
+4. **Dynamic Programming:**
 * Coin Change Problem
-* Matrix Chain Multiplication
+* Fibonacci Series
+* Knapsack Problem
 * Longest Increasing Subsequence
 
-6. **Backtracking:**
+5. **Backtracking:**
 * N-Queens Problem
-* Sudoku Solver
-* Hamiltonian Cycle
+* Rat in a maze
 * Subset Sum Problem
+* Sudoku
 
-7. **String Algorithms:**
-* String Matching ALgorithms
-* Longest Common Prefix
-* Longest Palindromic Substring
+6. **Graph Algorithms:**
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
+* Dijkstra's Algorithm (Shortest Path)
+* Floyd-Warshall Algorithm (All-Pairs Shortest Path)
+* Kruskal's Algorithm (Maximum Spanning Tree)
 
-8. **Miscellanous:**
+7. **Miscellanous:**
 * Binary Exponentiation
-* Euclidean Algorithm (GCD)
+* Extended Euclidean Algorithm (GCD)
+* Josephus Problem
+* Majority Voting Algorithm
 * Sieve of Eratosthenes (Prime numbers)
-* Topological String
-* Rat in a Maze Problem (Backtracking)
