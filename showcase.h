@@ -35,7 +35,64 @@
 #include "backtracking/subset_sum_problem.h"
 #include "backtracking/sudoku.h"
 
+#include "graph_algorithms/undirected_graph.h"
+#include "graph_algorithms/weighted_graph.h"
+#include "graph_algorithms/dfs.h"
+#include "graph_algorithms/bfs.h"
+#include "graph_algorithms/dijkstra_algorithm.h"
+#include "graph_algorithms/floyd-warshall_algorithm.h"
+#include "graph_algorithms/kruskal_algorithm.h"
+
 using namespace std;
+
+void ShowcaseGraphAlgorithms(){
+    // Undirected graph for DFS and BFS
+    UndirectedGraph undirected_graph(5);
+
+    undirected_graph.AddEdge(0, 1);
+    undirected_graph.AddEdge(0, 2);
+    undirected_graph.AddEdge(1, 3);
+    undirected_graph.AddEdge(2, 4);
+
+    // Weighted graph for the rest of algorithms
+    WeightedGraph weighted_graph(5);
+
+    weighted_graph.AddEdge(0, 1, 4);
+    weighted_graph.AddEdge(0, 2, 1);
+    weighted_graph.AddEdge(1, 2, 2);
+    weighted_graph.AddEdge(1, 3, 5);
+    weighted_graph.AddEdge(2, 3, 8);
+    weighted_graph.AddEdge(2, 4, 10);
+    weighted_graph.AddEdge(3, 4, 2);
+
+    cout << "Undirected graph: " << endl;
+    undirected_graph.PrintGraph();
+    cout << endl;
+
+    cout << "Depth-First Search:" << endl;
+    DFS(undirected_graph);
+    cout << endl;
+
+    cout << "Breadth-First Search:" << endl;
+    BFS(undirected_graph);
+    cout << endl;
+
+    cout << "Weighted graph: " << endl;
+    weighted_graph.PrintGraph();
+    cout << endl;
+
+    cout << "Dijkstra's Algorithm:" << endl;
+    DijkstraAlgorithm(weighted_graph);
+    cout << endl;
+
+    cout << "Floyd-Warshall Algorithm:" << endl;
+    FloydWarshallAlgorithm(weighted_graph);
+    cout << endl;
+
+    cout << "Kruskal's Algorithm:" << endl;
+    KruskalAlgorithm(weighted_graph);
+    cout << endl;
+}
 
 void ShowcaseBacktrackingAlgorithms(){
 

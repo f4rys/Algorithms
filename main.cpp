@@ -26,5 +26,8 @@ int main() {
     cout << "* Backtracking algorithms: *" << endl << endl;
     ShowcaseBacktrackingAlgorithms();
 
+    cout << "* Graph algorithms: *" << endl << endl;
+    ShowcaseGraphAlgorithms();
+
     return 0;
 }
