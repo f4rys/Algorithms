@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void BFS(const UndirectedGraph& graph) 
+void BreadthFirstSearch(const UndirectedGraph& graph) 
 {
     int num_vertices = graph.GetNumVertices();
     vector<bool> visited(num_vertices, false);

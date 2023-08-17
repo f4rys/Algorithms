@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void DFSUtil(const UndirectedGraph& graph, int start_vertex, vector<bool>& visited) 
+void DepthFirstSearchUtil(const UndirectedGraph& graph, int start_vertex, vector<bool>& visited) 
 {
     visited[start_vertex] = true;
     cout << start_vertex << " ";
@@ -14,12 +14,12 @@ void DFSUtil(const UndirectedGraph& graph, int start_vertex, vector<bool>& visit
     {
         if (!visited[neighbor]) 
         {
-            DFSUtil(graph, neighbor, visited);
+            DepthFirstSearchUtil(graph, neighbor, visited);
         }
     }
 }
 
-void DFS(const UndirectedGraph& graph) 
+void DepthFirstSearch(const UndirectedGraph& graph) 
 {
     vector<bool> visited(graph.GetNumVertices(), false);
 
@@ -27,7 +27,7 @@ void DFS(const UndirectedGraph& graph)
     {
         if (!visited[i]) 
         {
-            DFSUtil(graph, i, visited);
+            DepthFirstSearchUtil(graph, i, visited);
         }
     }
     

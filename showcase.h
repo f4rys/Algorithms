@@ -37,8 +37,8 @@
 
 #include "graph_algorithms/undirected_graph.h"
 #include "graph_algorithms/weighted_graph.h"
-#include "graph_algorithms/dfs.h"
-#include "graph_algorithms/bfs.h"
+#include "graph_algorithms/depth-first_search.h"
+#include "graph_algorithms/breadth-first_search.h"
 #include "graph_algorithms/dijkstra_algorithm.h"
 #include "graph_algorithms/floyd-warshall_algorithm.h"
 #include "graph_algorithms/kruskal_algorithm.h"
@@ -70,11 +70,11 @@ void ShowcaseGraphAlgorithms(){
     cout << endl;
 
     cout << "Depth-First Search:" << endl;
-    DFS(undirected_graph);
+    DepthFirstSearch(undirected_graph);
     cout << endl;
 
     cout << "Breadth-First Search:" << endl;
-    BFS(undirected_graph);
+    BreadthFirstSearch(undirected_graph);
     cout << endl;
 
     cout << "Weighted graph: " << endl;
