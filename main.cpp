@@ -26,8 +26,8 @@ int main()
     cout << "* Graph algorithms: *" << endl << endl;
     ShowcaseGraphAlgorithms();
 
-    cout << "* Miscellanous algorithms: *" << endl << endl;
-    ShowcaseMiscellanousAlgorithms();
+    cout << "* Miscellaneous algorithms: *" << endl << endl;
+    ShowcaseMiscellaneousAlgorithms();
 
     return 0;
 }

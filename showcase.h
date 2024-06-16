@@ -37,11 +37,11 @@
 #include "graph_algorithms/floyd-warshall_algorithm.h"
 #include "graph_algorithms/kruskal_algorithm.h"
 
-#include "miscellanous/binary_exponentation.h"
-#include "miscellanous/extended_euclidean_algorithm.h"
-#include "miscellanous/josephus_problem.h"
-#include "miscellanous/majority_voting_algorithm.h"
-#include "miscellanous/sieve_of_eratosthenes.h"
+#include "miscellaneous/binary_exponentation.h"
+#include "miscellaneous/extended_euclidean_algorithm.h"
+#include "miscellaneous/josephus_problem.h"
+#include "miscellaneous/majority_voting_algorithm.h"
+#include "miscellaneous/sieve_of_eratosthenes.h"
 
 using namespace std;
 
@@ -271,7 +271,7 @@ void ShowcaseGraphAlgorithms()
     cout << endl;
 }
 
-void ShowcaseMiscellanousAlgorithms()
+void ShowcaseMiscellaneousAlgorithms()
 {
     // Binary exponentation variables
     int base = 3;

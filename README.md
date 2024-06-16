@@ -1,9 +1,10 @@
 # Algorithms
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-<div>Various algorithms written in C++</div>
+Various algorithms written in C++.
 
 ## Showcase
-To view showcase of all algorithms with example inputs just run *main.cpp* in terminal.
+To view the showcase of all algorithms with example inputs just run *main.cpp* in the terminal.
 
 ## Content
 
@@ -46,7 +47,7 @@ To view showcase of all algorithms with example inputs just run *main.cpp* in te
 * Floyd-Warshall Algorithm (All-Pairs Shortest Path)
 * Kruskal's Algorithm (Maximum Spanning Tree)
 
-7. **Miscellanous:**
+7. **Miscellaneous:**
 * Binary Exponentiation
 * Extended Euclidean Algorithm (GCD)
 * Josephus Problem
